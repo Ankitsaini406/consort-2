@@ -12,10 +12,13 @@ import {
 } from '@/data/home-data';
 import { fetchPostsByType } from '@/lib/firebase-actions';
 import { Posts } from '@/types/types';
-import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
 import { fetchAllIndustries } from '@/app/industries/[slug]/action';
 import { transformIndustriesForInteractive } from '@/utils/industryValidation';
+import ClientScrollReveal from '@/components/client/ClientScrollReveal';
+import { ClientFadeIn } from '@/components/client/ClientFadeIn';
+import StaticHeroCarousel from '@/components/StaticHeroCarousel';
+import CompanyLogo from '@/components/CompanyLogo';
 
 // ISR Configuration - Cache for 1 hour, but allow on-demand revalidation
 export const revalidate = 3600;
@@ -124,47 +127,6 @@ export const metadata: Metadata = {
     images: ['/consort_OG.jpg'],
   },
 };
-
-
-// Client-side components with consistent dynamic imports and loading states
-const StaticHeroCarousel = dynamic(() => import('@/components/StaticHeroCarousel'), {
-  // ssr: false,
-  loading: () => (
-    <div className="w-full h-[512px] bg-neutral-50 animate-pulse rounded-md flex items-center justify-center">
-      <div className="text-sm text-gray-500">Loading carousel...</div>
-    </div>
-  )
-});
-
-const ClientScrollReveal = dynamic(() => import('@/components/client/ClientScrollReveal'), {
-  // ssr: false,
-  loading: () => <div className="opacity-0">Loading...</div>
-});
-
-const ClientFadeIn = dynamic(() => import('@/components/client/ClientFadeIn').then(mod => ({ default: mod.ClientFadeIn })), {
-  // ssr: false,
-  loading: () => <div className="opacity-0">Loading...</div>
-});
-
-const ClientHighlighter = dynamic(() => import('@/components/client/ClientHighlighter').then(mod => ({ default: mod.ClientHighlighter })), {
-  // ssr: false,
-  loading: () => <div className="opacity-0">Loading...</div>
-});
-
-const CompanyLogo = dynamic(() => import('@/components/CompanyLogo'), {
-  // ssr: false,
-  loading: () => (
-    <div className="w-full h-24 bg-neutral-50 animate-pulse rounded-md flex items-center justify-center">
-      <div className="text-sm text-gray-500">Loading logos...</div>
-    </div>
-  )
-});
-
-// Component aliases for simpler usage
-const ScrollReveal = ClientScrollReveal;
-const FadeIn = ClientFadeIn;
-
-
 
 export default async function Home() {
   // Fetch latest content server-side (ISR)
@@ -300,7 +262,7 @@ export default async function Home() {
 
 
           {/* Header 1 Open Standards appears with elegant fadein as soon as the user scrolls down */}
-          <ScrollReveal className="flex lg:w-[85%] flex-col items-center justify-center gap-12 mobile:gap-6 mobile:w-[95%] mobile:px-2 mobile:py-8 md:py-16">
+          <ClientScrollReveal className="flex lg:w-[85%] flex-col items-center justify-center gap-12 mobile:gap-6 mobile:w-[95%] mobile:px-2 mobile:py-8 md:py-16">
             <div className="flex w-full max-w-[960px] flex-col items-center justify-center gap-10">
               {/* Portfolio Header Image */}
               <div className="flex flex-col items-center justify-center md:gap-6 mobile:gap-3 px-4">
@@ -355,12 +317,12 @@ export default async function Home() {
                 ))}
               </div>
             </div>
-          </ScrollReveal>
+          </ClientScrollReveal>
 
 
 
           {/* Our Clients Section appears with elegant fadein as soon as the user scrolls down */}
-          <ScrollReveal className="flex w-[95%] flex-col items-center justify-center md:gap-12 mobile:gap-6 py-16">
+          <ClientScrollReveal className="flex w-[95%] flex-col items-center justify-center md:gap-12 mobile:gap-6 py-16">
             <div className="flex flex-col items-center justify-center gap-4">
 
               <h2 className="bg-gradient-to-r from-amber-600 to-red-700 bg-clip-text !font-extrabold text-transparent mobile:text-heading-2-sm md:text-heading-2-md lg:text-heading-2 font-heading-2 text-center mobile:font-heading-3 mobile:font-bold">
@@ -397,10 +359,10 @@ export default async function Home() {
                 ))}
               </div>
             </div>
-          </ScrollReveal>
+          </ClientScrollReveal>
 
           {/* Our Portfolio Section appears with elegant fadein as soon as the user scrolls down */}
-          <ScrollReveal
+          <ClientScrollReveal
             className="full-width-bg lg:py-20 bg-neutral-100 flex w-full flex-col items-center justify-center gap-6 mobile:px-4 mobile:py-4 md:py-12"
           >
             <div className="flex flex-col items-center justify-center gap-6 py-8">
@@ -452,7 +414,7 @@ export default async function Home() {
                     url: "/portfolio?tab=networks"
                   },
                 ].map(({ count, desc, image, url }, idx) => (
-                  <ScrollReveal
+                  <ClientScrollReveal
                     key={idx}
                     delay={idx * 0.15}
                     duration={0.8}
@@ -490,12 +452,12 @@ export default async function Home() {
                         </span>
                       </div>
                     </Link>
-                  </ScrollReveal>
+                  </ClientScrollReveal>
                 ))}
               </div>
 
             </div>
-            <ScrollReveal delay={0.1} duration={1.0} blurAmount={10}>
+            <ClientScrollReveal delay={0.1} duration={1.0} blurAmount={10}>
               <div className="px-1 flex flex-wrap justify-center gap-4 pt-2 mobile:px-0">
                 <Button3
                   variant="destructive-primary"
@@ -512,14 +474,14 @@ export default async function Home() {
                   View All Products
                 </Button3>
               </div>
-            </ScrollReveal>
+            </ClientScrollReveal>
             {/* Portfolio Stack appears with elegant fadein as soon as the user scrolls down */}
-            {/* <ScrollReveal className="w-full my-24">
+            {/* <ClientScrollReveal className="w-full my-24">
               <PortfolioStack />
-            </ScrollReveal> */}
+            </ClientScrollReveal> */}
 
-          </ScrollReveal>
-          <ScrollReveal className="w-full my-24">
+          </ClientScrollReveal>
+          <ClientScrollReveal className="w-full my-24">
             {/* Our Industry Focus Section appears with elegant fadein as soon as the user scrolls down */}
             <div className="text-center md:mb-12 mobile:mb-2">
               <h2 className="text-consort-blue mobile:text-heading-2-sm md:text-heading-2-md lg:text-heading-2 font-heading-2">
@@ -531,11 +493,11 @@ export default async function Home() {
             </div>
 
             {/* Industry Focus Section appears with elegant fadein as soon as the user scrolls down */}
-            <ScrollReveal delay={0.1} duration={1.0} blurAmount={10} className="w-full mt-24 mobile:mt-12">
+            <ClientScrollReveal delay={0.1} duration={1.0} blurAmount={10} className="w-full mt-24 mobile:mt-12">
               <IndustryFocus />
-            </ScrollReveal>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1} duration={1.0} blurAmount={10} className="w-full mb-24 mobile:hidden">
+            </ClientScrollReveal>
+          </ClientScrollReveal>
+          <ClientScrollReveal delay={0.1} duration={1.0} blurAmount={10} className="w-full mb-24 mobile:hidden">
             {/* Our Industry Focus Section appears with elegant fadein as soon as the user scrolls down */}
             <div className="text-center mb-12">
               {/* <h2 className="text-consort-blue mobile:text-heading-2-sm md:text-heading-2-md lg:text-heading-2 font-heading-2">
@@ -547,7 +509,7 @@ export default async function Home() {
             </div>
             <InteractiveIndustrySection industries={industries} />
 
-          </ScrollReveal>
+          </ClientScrollReveal>
 
           {/* End of Hero Stats */}
           {/* <div className="flex w-full items-center justify-center pt-8">
@@ -555,7 +517,7 @@ export default async function Home() {
           </div> */}
 
           {/* Header 1 Open Standards */}
-          <ScrollReveal className="flex w-full max-w-[1280px] flex-col items-center justify-center gap-12 mobile:gap-6 py-16">
+          <ClientScrollReveal className="flex w-full max-w-[1280px] flex-col items-center justify-center gap-12 mobile:gap-6 py-16">
             <div className="flex flex-col items-center justify-center gap-10">
               <div className="flex flex-col items-center justify-center gap-4">
                 <BadgeConsort
@@ -568,7 +530,7 @@ export default async function Home() {
                   {"Truly Flexible, Smart, Scalable Architecture offering Multi-Tech Stack"}
                 </h4>
                 {/* Hero Buttons */}
-                <FadeIn>
+                <ClientFadeIn>
                   <div className="px-1 flex flex-wrap justify-center gap-4 pt-2 mobile:px-0">
                     <Button3
                       variant="destructive-primary"
@@ -585,12 +547,12 @@ export default async function Home() {
                       About MCX ONE™
                     </Button3>
                   </div>
-                </FadeIn>
+                </ClientFadeIn>
               </div>
             </div>
             <div className="flex w-full flex-col items-center gap-3">
               <div className="flex w-full flex-wrap items-stretch gap-3 mobile:flex-col">
-                <ScrollReveal
+                <ClientScrollReveal
                   delay={0.1}
                   duration={1.0}
                   blurAmount={10}
@@ -614,8 +576,8 @@ export default async function Home() {
                     width={300}
                     height={150}
                   />
-                </ScrollReveal>
-                <ScrollReveal
+                </ClientScrollReveal>
+                <ClientScrollReveal
                   delay={0.3}
                   duration={1.2}
                   blurAmount={12}
@@ -641,10 +603,10 @@ export default async function Home() {
                     width={300}
                     height={150}
                   />
-                </ScrollReveal>
+                </ClientScrollReveal>
               </div>
 
-              <ScrollReveal
+              <ClientScrollReveal
                 delay={0.1}
                 duration={1.0}
                 blurAmount={10}
@@ -702,11 +664,11 @@ export default async function Home() {
                 </div>
 
 
-              </ScrollReveal>
+              </ClientScrollReveal>
             </div>
 
 
-          </ScrollReveal>
+          </ClientScrollReveal>
 
 
           <div>
@@ -720,7 +682,7 @@ export default async function Home() {
 
       {/* Blogs Section appears with elegant fadein as soon as the user scrolls down */}
 
-      <ScrollReveal className="full-width-bg py-24 flex w-full flex-col items-center justify-center gap-12 mobile:px-4 mobile:py-4 bg-gradient-to-b from-brand-50 via-neutral-100 to-white">
+      <ClientScrollReveal className="full-width-bg py-24 flex w-full flex-col items-center justify-center gap-12 mobile:px-4 mobile:py-4 bg-gradient-to-b from-brand-50 via-neutral-100 to-white">
 
         <div className="flex flex-col items-center justify-center gap-4">
           <BadgeConsort
@@ -809,7 +771,7 @@ export default async function Home() {
           </div>
         )}
 
-      </ScrollReveal>
+      </ClientScrollReveal>
 
 
 

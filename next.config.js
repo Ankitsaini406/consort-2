@@ -58,7 +58,6 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  // output: 'export',  // Static export for Firebase
   // Core Next.js settings
   poweredByHeader: false,
   reactStrictMode: true,
