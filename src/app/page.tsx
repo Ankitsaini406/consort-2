@@ -20,6 +20,8 @@ import { ClientFadeIn } from '@/components/client/ClientFadeIn';
 import StaticHeroCarousel from '@/components/StaticHeroCarousel';
 import CompanyLogo from '@/components/CompanyLogo';
 
+export const dynamic = 'force-static';
+
 // ISR Configuration - Cache for 1 hour, but allow on-demand revalidation
 export const revalidate = 3600;
 
@@ -93,8 +95,8 @@ const ArrowUpRight = ({ className }: { className?: string }) => (
 );
 
 export const metadata: Metadata = {
-  title: 'Consort Digital MCX ONE™ – Secure, Scalable Mission‑Critical Communications',
-  description: 'Consort Digital delivers MCX ONE™, a future-ready platform for secure, interoperable, and reliable mission-critical communications across TETRA, 4G/5G, and hybrid networks.',
+  title: 'Consort Digital MCX ONE™ – Secure, Scalable Mission‑Critical Communications',
+  description: 'Consort Digital delivers MCX ONE™, a future-ready platform for secure, interoperable, and reliable mission-critical communications across TETRA, 4G/5G, and hybrid networks.',
   keywords: [
     'Consort Digital',
     'MCX ONE',
@@ -106,8 +108,8 @@ export const metadata: Metadata = {
     'mission critical devices',
   ],
   openGraph: {
-    title: 'Consort Digital MCX ONE™ – Secure & Scalable MCX Platform',
-    description: 'MCX ONE™ by Consort Digital enables secure, mission-critical voice, video, and data services—trusted by critical operations globally.',
+    title: 'Consort Digital MCX ONE™ – Secure & Scalable MCX Platform',
+    description: 'MCX ONE™ by Consort Digital enables secure, mission-critical voice, video, and data services—trusted by critical operations globally.',
     url: 'https://www.consortdigital.com',
     siteName: 'Consort Digital',
     type: 'website',
@@ -122,7 +124,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Consort Digital MCX ONE™ – Secure & Scalable MCX Platform',
+    title: 'Consort Digital MCX ONE™ – Secure & Scalable MCX Platform',
     description: 'Empowering mission-critical operations with consistent, secure, and scalable MCX communications solutions.',
     images: ['/consort_OG.jpg'],
   },
