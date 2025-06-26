@@ -1,0 +1,310 @@
+  ▲ Next.js 14.2.30
+   Creating an optimized production build ...
+warn - The class `duration-[2000ms]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `duration-&lsqb;2000ms&rsqb;` to silence this warning.
+ ✓ Compiled successfully
+   Skipping validation of types
+   Skipping linting
+It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+Installing dependencies
+If you are not trying to use TypeScript, please remove the tsconfig.json file from your package root (and any TypeScript files in your pages directory).
+Installing devDependencies (npm):
+- typescript
+npm WARN deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm WARN deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm WARN deprecated domexception@4.0.0: Use your platform's native DOMException instead
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+added 595 packages, and audited 1256 packages in 18s
+212 packages are looking for funding
+  run `npm fund` for details
+found 0 vulnerabilities
+   Collecting page data ...
+[generateStaticParams] Starting industries static params generation...
+[fetchAllIndustries] Starting fetch...
+[FIREBASE-SERVER] Initialized new server app instance
+[FIREBASE-SERVER] Server Firebase initialization completed successfully
+Error: Metadata string value "﻿1:545144758087:web:04e37c0c8eaa05ed1e3662" contains illegal characters
+    at validate (/workspace/node_modules/@grpc/grpc-js/build/src/metadata.js:55:23)
+    at Metadata.set (/workspace/node_modules/@grpc/grpc-js/build/src/metadata.js:77:9)
+    at createMetadata (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:19324:18)
+    at GrpcConnection.openStream (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:19419:26)
+    at PersistentListenStream.startRpc (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22993:32)
+    at PersistentListenStream.startStream (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22911:28)
+    at /workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22900:22
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:540:9)
+    at process.processTimers (node:internal/timers:514:7)
+[2025-06-25T18:10:13.805Z]  @firebase/firestore: Firestore (11.9.0): Could not reach Cloud Firestore backend. Backend didn't respond within 10 seconds.
+This typically indicates that your device does not have a healthy Internet connection at the moment. The client will operate in offline mode until it is able to successfully connect to the backend.
+[fetchAllIndustries] No industries found in database
+[generateStaticParams] Generated 0 industry routes
+[generateStaticParams] Starting portfolio static params generation...
+Error generating static params for portfolio: Error: Firebase timeout
+    at Timeout._onTimeout (/workspace/.next/server/chunks/2155.js:1:33120)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[generateStaticParams] Using fallback params: 4 routes
+[generateStaticParams] Starting posts static params generation...
+[generateStaticParams] Using fallback params: 4 routes
+Error generating static params for posts: Error: Firebase timeout
+    at Timeout._onTimeout (/workspace/.next/server/app/posts/[type]/[slug]/page.js:1:2103)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[generateStaticParams] Starting resources static params generation...
+[generateStaticParams] Using fallback params: 3 routes
+Error generating static params for resources: Error: Firebase timeout
+    at Timeout._onTimeout (/workspace/.next/server/app/resources/[type]/[slug]/page.js:1:2131)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[validateServicesIntegrity] ✅ All 9 services validated successfully
+[generateStaticParams] Starting solutions static params generation...
+[generateStaticParams] Using fallback params: 4 routes
+Error generating static params for solutions: Error: Firebase timeout
+    at Timeout._onTimeout (/workspace/.next/server/app/solution/[slug]/page.js:1:8392)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+   Generating static pages (0/78) ...
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+ ⚠ Sending SIGTERM signal to Next.js build worker due to timeout of 120 seconds. Subsequent errors may be a result of the worker exiting.
+ ⨯ Next.js build worker exited with code: null and signal: SIGTERM
+ ⚠ Restarted static page generation for /_not-found because it took more than 120 seconds
+ ⚠ See more info here https://nextjs.org/docs/messages/static-page-generation-timeout
+ ⚠ Restarted static page generation for /admin/create-sample-data because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/industries because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/list-details because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/posts because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/products/form because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/products because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/resources because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/solutions because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/tab-conflict because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/tag-system because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/ui-demo because it took more than 120 seconds
+ ⚠ Restarted static page generation for /auth/forgot-password because it took more than 120 seconds
+ ⚠ Restarted static page generation for /auth because it took more than 120 seconds
+ ⚠ Restarted static page generation for /cta because it took more than 120 seconds
+ ⚠ Restarted static page generation for /demo/rich-text-editor-v2 because it took more than 120 seconds
+ ⚠ Restarted static page generation for /events/cards-demo because it took more than 120 seconds
+ ⚠ Restarted static page generation for /events/demo-options because it took more than 120 seconds
+ ⚠ Restarted static page generation for /events/landing-demo because it took more than 120 seconds
+ ⚠ Restarted static page generation for / because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/consort-acquires-inative-networks because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/new-partnership-with-aerocorp because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/lte-rollout-for-national-railway because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/public-safety-summit-2024 because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/consort-digital-at-airport-expo because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/maritime-security-conference because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/hdcs-deployed-on-offshore-rigs because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/smart-metro-communication-system because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/emergency-response-network-upgrade because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/new-sdk-for-airport-logistics because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/inative-networks-integration-complete because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/aerocorp-partnership-phase-2 because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/high-speed-rail-comms-trial because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/consort-wins-public-safety-award because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/mcx-one-platform-update-v2-5 because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio/automation-solution because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio/industrial-iot because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio/digital-transformation because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio/mcx-one because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/news/company-announcement because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/blog-post/digital-transformation-guide because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/events/upcoming-conference because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/announcements/product-launch because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/blog-post because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/news because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/events because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/announcements because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/case-study/automation-success-story because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/whitepaper/digital-transformation-whitepaper because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/client-review/client-testimonial because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/case-study because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/whitepaper because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/client-review because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/resources because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/design-engineering because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/coverage-analysis because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/integration-services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/installation-commissioning because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/project-management because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/support-services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/managed-services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/application-development because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/device-repair-services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /solution/automation-solution because it took more than 120 seconds
+ ⚠ Restarted static page generation for /solution/iot-platform because it took more than 120 seconds
+ ⚠ Restarted static page generation for /solution/digital-transformation because it took more than 120 seconds
+ ⚠ Restarted static page generation for /solution/industrial-connectivity because it took more than 120 seconds
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+[FIREBASE-SERVER] Initialized new server app instance
+[FIREBASE-SERVER] Server Firebase initialization completed successfully
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+Error: Metadata string value "﻿1:545144758087:web:04e37c0c8eaa05ed1e3662" contains illegal characters
+    at validate (/workspace/node_modules/@grpc/grpc-js/build/src/metadata.js:55:23)
+    at Metadata.set (/workspace/node_modules/@grpc/grpc-js/build/src/metadata.js:77:9)
+    at createMetadata (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:19324:18)
+    at GrpcConnection.openStream (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:19419:26)
+    at PersistentListenStream.startRpc (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22993:32)
+    at PersistentListenStream.startStream (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22911:28)
+    at /workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22900:22
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:540:9)
+    at process.processTimers (node:internal/timers:514:7)
+[2025-06-25T18:14:31.354Z]  @firebase/firestore: Firestore (11.9.0): Could not reach Cloud Firestore backend. Backend didn't respond within 10 seconds.
+This typically indicates that your device does not have a healthy Internet connection at the moment. The client will operate in offline mode until it is able to successfully connect to the backend.
+[fetchAllIndustries] No industries found in database
+[menuConfig] Validation summary: { total: 0, valid: 0, invalid: 0, published: 0, drafts: 0 }
+[menuConfig] Successfully generated build-time menu with 0 industry items
+[menuConfig] Validation summary: { total: 0, valid: 0, invalid: 0, published: 0, drafts: 0 }
+[menuConfig] Successfully generated build-time menu with 0 industry items
+[fetchAllIndustries] No industries found in database
+   Generating static pages (9/78) 
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+ ⚠ Sending SIGTERM signal to Next.js build worker due to timeout of 120 seconds. Subsequent errors may be a result of the worker exiting.
+ ⚠ Restarted static page generation for /admin/create-sample-data because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/industries because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/list-details because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/posts because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/products/form because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/products because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/resources because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/solutions because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/tab-conflict because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/tag-system because it took more than 120 seconds
+ ⚠ Restarted static page generation for /admin/ui-demo because it took more than 120 seconds
+ ⚠ Restarted static page generation for /auth/forgot-password because it took more than 120 seconds
+ ⚠ Restarted static page generation for /auth because it took more than 120 seconds
+ ⚠ Restarted static page generation for /cta because it took more than 120 seconds
+ ⚠ Restarted static page generation for /demo/rich-text-editor-v2 because it took more than 120 seconds
+ ⚠ Restarted static page generation for /events/cards-demo because it took more than 120 seconds
+ ⚠ Restarted static page generation for /events/demo-options because it took more than 120 seconds
+ ⚠ Restarted static page generation for /events/landing-demo because it took more than 120 seconds
+ ⚠ Restarted static page generation for / because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/consort-acquires-inative-networks because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/new-partnership-with-aerocorp because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/lte-rollout-for-national-railway because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/public-safety-summit-2024 because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/consort-digital-at-airport-expo because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/maritime-security-conference because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/hdcs-deployed-on-offshore-rigs because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/smart-metro-communication-system because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/emergency-response-network-upgrade because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/new-sdk-for-airport-logistics because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/inative-networks-integration-complete because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/aerocorp-partnership-phase-2 because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/high-speed-rail-comms-trial because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/consort-wins-public-safety-award because it took more than 120 seconds
+ ⚠ Restarted static page generation for /news/mcx-one-platform-update-v2-5 because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio/automation-solution because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio/industrial-iot because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio/digital-transformation because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio/mcx-one because it took more than 120 seconds
+ ⚠ Restarted static page generation for /portfolio because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/news/company-announcement because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/blog-post/digital-transformation-guide because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/events/upcoming-conference because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/announcements/product-launch because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/blog-post because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/news because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/events because it took more than 120 seconds
+ ⚠ Restarted static page generation for /posts/announcements because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/case-study/automation-success-story because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/whitepaper/digital-transformation-whitepaper because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/client-review/client-testimonial because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/case-study because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/whitepaper because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/client-review because it took more than 120 seconds
+ ⚠ Restarted static page generation for /resources/resources because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/design-engineering because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/coverage-analysis because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/integration-services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/installation-commissioning because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/project-management because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/support-services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/managed-services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/application-development because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services/device-repair-services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /services because it took more than 120 seconds
+ ⚠ Restarted static page generation for /solution/automation-solution because it took more than 120 seconds
+ ⚠ Restarted static page generation for /solution/iot-platform because it took more than 120 seconds
+ ⚠ Restarted static page generation for /solution/digital-transformation because it took more than 120 seconds
+ ⚠ Restarted static page generation for /solution/industrial-connectivity because it took more than 120 seconds
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+[FIREBASE-SERVER] Initialized new server app instance
+[FIREBASE-SERVER] Server Firebase initialization completed successfully
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+Error: Metadata string value "﻿1:545144758087:web:04e37c0c8eaa05ed1e3662" contains illegal characters
+    at validate (/workspace/node_modules/@grpc/grpc-js/build/src/metadata.js:55:23)
+    at Metadata.set (/workspace/node_modules/@grpc/grpc-js/build/src/metadata.js:77:9)
+    at createMetadata (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:19324:18)
+    at GrpcConnection.openStream (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:19419:26)
+    at PersistentListenStream.startRpc (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22993:32)
+    at PersistentListenStream.startStream (/workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22911:28)
+    at /workspace/node_modules/@firebase/firestore/dist/index.node.cjs.js:22900:22
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:540:9)
+    at process.processTimers (node:internal/timers:514:7)
+[2025-06-25T18:16:42.672Z]  @firebase/firestore: Firestore (11.9.0): Could not reach Cloud Firestore backend. Backend didn't respond within 10 seconds.
+This typically indicates that your device does not have a healthy Internet connection at the moment. The client will operate in offline mode until it is able to successfully connect to the backend.
+[fetchAllIndustries] No industries found in database
+[menuConfig] Validation summary: { total: 0, valid: 0, invalid: 0, published: 0, drafts: 0 }
+[menuConfig] Successfully generated build-time menu with 0 industry items
+[fetchAllIndustries] No industries found in database
+[menuConfig] Validation summary: { total: 0, valid: 0, invalid: 0, published: 0, drafts: 0 }
+[menuConfig] Successfully generated build-time menu with 0 industry items
+   Generating static pages (10/78) 
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+[menuConfig] Generating menu at build time...
+[fetchAllIndustries] Starting fetch...
+ ⚠ Sending SIGTERM signal to Next.js build worker due to timeout of 120 seconds. Subsequent errors may be a result of the worker exiting.
+> Build error occurred
+Error: Static page generation for /admin/industries is still timing out after 3 attempts. See more info here https://nextjs.org/docs/messages/static-page-generation-timeout
+    at onRestart (/workspace/node_modules/next/dist/build/index.js:292:27)
+    at /workspace/node_modules/next/dist/lib/worker.js:104:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /workspace/node_modules/next/dist/export/index.js:450:20
+    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:154:20)
+    at async /workspace/node_modules/next/dist/export/index.js:448:24
+    at async Promise.all (index 10)
+    at async exportAppImpl (/workspace/node_modules/next/dist/export/index.js:440:21)
+    at async /workspace/node_modules/next/dist/export/index.js:623:16
+    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:154:20)
+/layers/google.nodejs.firebasenextjs/npm_modules/node_modules/@apphosting/common/dist/index.js:36
+                reject(new Error(`Build process exited with error code ${code}.`));
+                       ^
+Error: Build process exited with error code 1.
+    at ChildProcess.<anonymous> (/layers/google.nodejs.firebasenextjs/npm_modules/node_modules/@apphosting/common/dist/index.js:36:24)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+Node.js v20.11.0"}
+ERROR: failed to build: exit status 1
+ERROR: failed to build: executing lifecycle: failed with status code: 51
+Finished Step #2 - "pack"
+ERROR
+ERROR: build step 2 "gcr.io/k8s-skaffold/pack" failed: step exited with non-zero status: 1
+
+
